@@ -16,7 +16,19 @@ const ContainerFormulario = styled.div`
 `;
 
 function App() {
-  const [resumen, setResumen] = useState({});
+  const [resumen, setResumen] = useState({
+    cotizacion: 0,
+    datos: {
+      marca: "",
+      year: "",
+      plan: "",
+    },
+  });
+
+  //
+  const { datos, cotizacion } = resumen;
+
+  console.log(datos);
   return (
     <>
       <Container>
@@ -24,7 +36,7 @@ function App() {
         <ContainerFormulario>
           <Form setResumen={setResumen} />
 
-          {resumen.lenght === 0 ? <Resumen resumen={resumen} /> : null}
+          {cotizacion >= 1 ? <Resumen datos={datos} /> : null}
         </ContainerFormulario>
       </Container>
     </>

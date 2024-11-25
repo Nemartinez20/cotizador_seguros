@@ -1,22 +1,22 @@
-const Resumen = ({ resumen }) => {
-  console.log(resumen);
+const Resumen = ({ datos }) => {
+  console.log(datos);
 
-  const { datos } = resumen;
+  const { marca, year, plan } = datos;
   return (
     <>
       <div>
         <h2>Resumen de cotizacion</h2>
         <p>
           <span>Marca: </span>
-          {datos.marca}
+          {marca}
         </p>
         <p>
           <span>Plan:</span>
-          {datos.plan}
+          {plan}
         </p>
         <p>
           <span>Año del auto:</span>
-          {datos.year}
+          {year}
         </p>
       </div>
     </>
