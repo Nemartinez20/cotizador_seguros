@@ -4,5 +4,10 @@
     box-sizing: border-box;
 }
 body{
-    background-color: burlywood;
+    background-color: rgb(233, 201, 159);
+}
+.container{
+    margin: 10px auto;
+    max-width: 1200px;
+    cursor: pointer;
 }
